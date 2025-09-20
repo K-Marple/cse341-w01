@@ -1,0 +1,27 @@
+{
+  "name": "simple-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K-Marple/cse341.git"
+  },
+  "author": "Kayli Marple",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/K-Marple/cse341/issues"
+  },
+  "homepage": "https://github.com/K-Marple/cse341#readme",
+  "description": ""
+}
