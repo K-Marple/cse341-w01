@@ -9,3 +9,6 @@ GET http://localhost:3000/contacts/68d73d96027c568654903943 HTTP/1.1
 
 ### GET by ids3
 GET http://localhost:3000/contacts/68d73dd8027c568654903944 HTTP/1.1
+
+### GET PRODUCTION
+GET https://cse341-pslh.onrender.com/contacts HTTP/1.1
