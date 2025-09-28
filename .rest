@@ -1,14 +1,23 @@
 ### GET contacts
 GET http://localhost:3000/contacts HTTP/1.1
 
-### GET by ids1
+### GET by id1
 GET http://localhost:3000/contacts/68d73ce4027c568654903942 HTTP/1.1
 
-### GET by ids2
+### GET by id2
 GET http://localhost:3000/contacts/68d73d96027c568654903943 HTTP/1.1
 
-### GET by ids3
+### GET by id3
 GET http://localhost:3000/contacts/68d73dd8027c568654903944 HTTP/1.1
 
-### GET PRODUCTION
+### GET PRODUCTION contacts
 GET https://cse341-pslh.onrender.com/contacts HTTP/1.1
+
+### GET PRODUCTION by id1
+GET https://cse341-pslh.onrender.com/contacts/68d73ce4027c568654903942 HTTP/1.1
+
+### GET PRODUCTION by id2
+GET https://cse341-pslh.onrender.com/contacts/68d73d96027c568654903943 HTTP/1.1
+
+### GET PRODUCTION by id3
+GET https://cse341-pslh.onrender.com/contacts/68d73dd8027c568654903944 HTTP/1.1
