@@ -1,0 +1,11 @@
+### GET contacts
+GET http://localhost:3000/contacts HTTP/1.1
+
+### GET by ids1
+GET http://localhost:3000/contacts/68d73ce4027c568654903942 HTTP/1.1
+
+### GET by ids2
+GET http://localhost:3000/contacts/68d73d96027c568654903943 HTTP/1.1
+
+### GET by ids3
+GET http://localhost:3000/contacts/68d73dd8027c568654903944 HTTP/1.1

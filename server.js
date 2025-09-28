@@ -1,16 +1,18 @@
 /* Required Statements */
 const express = require("express");
 const app = express();
-const route = require("./routes/index");
+const route = require("./routes");
+const { connectDB } = require("./database/connection");
 
 /* Local Server */
-const port = 3000;
-const host = "localhost";
+const port = process.env.PORT || 3000;
 
 /* Routes */
 app.use("/", route);
 
 /* Confirm Operation */
-app.listen(port, () => {
-  console.log(`app listening on ${host}:${port}`);
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`app listening on ${port}`);
+  });
 });
