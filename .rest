@@ -1,23 +1,68 @@
 ### GET contacts
 GET http://localhost:3000/contacts HTTP/1.1
 
-### GET by id1
-GET http://localhost:3000/contacts/68d73ce4027c568654903942 HTTP/1.1
+### GET by id
+GET http://localhost:3000/contacts/68e1af567e0560f427aa0b1c HTTP/1.1
 
-### GET by id2
-GET http://localhost:3000/contacts/68d73d96027c568654903943 HTTP/1.1
+### POST (new) contact
+POST http://localhost:3000/contacts HTTP/1.1
+Content-Type: application/json
 
-### GET by id3
-GET http://localhost:3000/contacts/68d73dd8027c568654903944 HTTP/1.1
+{
+    "firstName": "Keely",
+    "lastName": "McIntyre",
+    "email": "keely@email.com",
+    "favoriteColor": "Green",
+    "birthday": "10/19/98"
+}
+
+### PUT (update) contact
+PUT http://localhost:3000/contacts/68e1af677e0560f427aa0b1d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Clark",
+    "lastName": "Marple",
+    "email": "clark@email.com",
+    "favoriteColor": "Red",
+    "birthday": "03/16/91"
+}
+
+### DELETE contact
+DELETE http://localhost:3000/contacts/68e1b36a85db324902fb750b HTTP/1.1
+
+
+### PRODUCTION REQUESTS ###
 
 ### GET PRODUCTION contacts
 GET https://cse341-pslh.onrender.com/contacts HTTP/1.1
 
-### GET PRODUCTION by id1
-GET https://cse341-pslh.onrender.com/contacts/68d73ce4027c568654903942 HTTP/1.1
+### GET PRODUCTION by id
+GET https://cse341-pslh.onrender.com/contacts/68e1af567e0560f427aa0b1c HTTP/1.1
 
-### GET PRODUCTION by id2
-GET https://cse341-pslh.onrender.com/contacts/68d73d96027c568654903943 HTTP/1.1
+### POST PRODUCTION
+POST https://cse341-pslh.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
 
-### GET PRODUCTION by id3
-GET https://cse341-pslh.onrender.com/contacts/68d73dd8027c568654903944 HTTP/1.1
+{
+    "firstName": "Keely",
+    "lastName": "McIntyre",
+    "email": "keely@email.com",
+    "favoriteColor": "Purple",
+    "birthday": "10/19/98"
+}
+
+### PUT PRODUCTION
+PUT https://cse341-pslh.onrender.com/contacts/68e1af677e0560f427aa0b1d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Clark",
+    "lastName": "Marple",
+    "email": "clark@email.com",
+    "favoriteColor": "Green",
+    "birthday": "04/16/91"
+}
+
+### DELETE PRODUCTION
+DELETE https://cse341-pslh.onrender.com/contacts/68e1b4011cbf626b010b3f63 HTTP/1.1

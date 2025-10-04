@@ -7,6 +7,9 @@ const { connectDB } = require("./database/connection");
 /* Local Server */
 const port = process.env.PORT || 3000;
 
+/* Middleware */
+app.use(express.json());
+
 /* Routes */
 app.use("/", route);
 

@@ -19,5 +19,12 @@
         "email": "clark@email.com",
         "favoriteColor": "Red",
         "birthday": "03/16/91"
+    },
+    "contact4": {
+        "firstName": "Keely",
+        "lastName": "McIntyre",
+        "email": "keely@email.com",
+        "favoriteColor": "Green",
+        "birthday": "10/19/98"
     }
 }
