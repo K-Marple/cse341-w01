@@ -60,9 +60,9 @@ Content-Type: application/json
     "firstName": "Clark",
     "lastName": "Marple",
     "email": "clark@email.com",
-    "favoriteColor": "Green",
+    "favoriteColor": "Red",
     "birthday": "04/16/91"
 }
 
 ### DELETE PRODUCTION
-DELETE https://cse341-pslh.onrender.com/contacts/68e1b4011cbf626b010b3f63 HTTP/1.1
+DELETE https://cse341-pslh.onrender.com/contacts/68e1b52ee17409624ddc313b HTTP/1.1
