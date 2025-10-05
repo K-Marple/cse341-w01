@@ -33,7 +33,7 @@ const createContact = async (req, res) => {
     .insertOne({ _id: new contactId(), contact });
   console.log(db_response);
   res.setHeader("Content-Type", "application/json");
-  res.status(200).json(db_response);
+  res.status(201).json(db_response);
 };
 
 const updateContact = async (req, res) => {
@@ -51,7 +51,7 @@ const updateContact = async (req, res) => {
     .replaceOne({ _id: new contactId(id) }, contact);
   console.log(contact);
   res.setHeader("Content-Type", "application/json");
-  res.status(200).json(db_response);
+  res.status(204).json(db_response);
 };
 
 const deleteContact = async (req, res) => {
@@ -62,7 +62,7 @@ const deleteContact = async (req, res) => {
     .deleteOne({ _id: new contactId(id) });
   console.log(db_response);
   if (db_response.deletedCount === 1) {
-    res.status(200).send();
+    res.status(204).send();
   }
 };
 
