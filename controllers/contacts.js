@@ -2,6 +2,8 @@
 const database = require("../database/connection");
 const contactId = require("mongodb").ObjectId;
 
+const apiKey = "3vedp5tkbalwi428xcfz6oquj0m97srg";
+
 const allContacts = async (req, res) => {
   const db = database.getDB();
   const db_response = await db.collection("contacts").find().toArray();

@@ -3,9 +3,14 @@ const express = require("express");
 const app = express();
 const route = require("./routes");
 const { connectDB } = require("./database/connection");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
 
 /* Local Server */
 const port = process.env.PORT || 3000;
+
+/* Swagger */
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /* Middleware */
 app.use(express.json());

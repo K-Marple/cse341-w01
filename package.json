@@ -4,6 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "swagger": "node swagger.js",
     "dev": "nodemon server.js"
   },
   "repository": {
@@ -15,10 +16,12 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.21.2",
-    "mongodb": "^6.20.0"
+    "mongodb": "^6.20.0",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "swagger-autogen": "^2.23.7"
   },
   "bugs": {
     "url": "https://github.com/K-Marple/cse341/issues"
