@@ -14,7 +14,14 @@ const port = process.env.PORT || 3000;
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /* Middleware */
-app.use(cors());
+app.use(
+  cors({
+    origin:
+      process.env.NODE_ENV === "production"
+        ? "https://cse341-pslh.onrender.com/api-docs"
+        : "https://localhost:3000",
+  })
+);
 app.use(express.json());
 
 /* Routes */
