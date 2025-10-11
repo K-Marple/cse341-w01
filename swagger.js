@@ -8,7 +8,7 @@ const doc = {
   host:
     process.env.NODE_ENV === "production"
       ? "https://cse341-pslh.onrender.com"
-      : "localhost:3000",
+      : "https://localhost:3000",
   schemes: ["http"],
 };
 
