@@ -12,7 +12,7 @@ const {
 // Route to contacts
 
 /**
- * @route GET /contacts
+ * @route GET /
  * @description Get all contacts
  * @security apiKey
  * @returns {object} 200 - Contact array
