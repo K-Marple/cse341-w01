@@ -14,6 +14,7 @@
   "author": "Kayli Marple",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.21.2",
     "mongodb": "^6.20.0",
