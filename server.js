@@ -18,8 +18,8 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://cse341-pslh.onrender.com/api-docs"
-        : "https://localhost:3000",
+        ? "https://cse341-pslh.onrender.com"
+        : "http://localhost:3000",
   })
 );
 app.use(express.json());

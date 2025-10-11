@@ -9,12 +9,12 @@ const doc = {
     process.env.NODE_ENV === "production"
       ? "cse341-pslh.onrender.com"
       : "localhost:3000",
-  schemes: ["http"],
+  schemes: [process.env.NODE_ENV === "production" ? "https" : "http"],
 };
 
 const outputFile = "./swagger.json";
-const endppointFile = ["./routes/index.js"];
+const endpointFile = ["./routes/index.js"];
 
-swaggerAutogen(outputFile, endppointFile, doc).then(() => {
+swaggerAutogen(outputFile, endpointFile, doc).then(() => {
   console.log("Swagger generated. Run server.");
 });
