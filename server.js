@@ -15,12 +15,13 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /* Middleware */
 app.use(
-  cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? "https://cse341-pslh.onrender.com"
-        : "http://localhost:3000",
-  })
+  cors()
+  // cors({
+  //   origin:
+  //     process.env.NODE_ENV === "production"
+  //       ? "https://cse341-pslh.onrender.com"
+  //       : "http://localhost:3000",
+  // })
 );
 app.use(express.json());
 
