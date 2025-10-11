@@ -6,12 +6,24 @@ const route = require("./routes");
 const { connectDB } = require("./database/connection");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
+const fs = require("fs");
 
 /* Local Server */
 const port = process.env.PORT || 3000;
 
 /* Swagger */
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.get("/swagger.json", (req, res) => {
+  const file = fs.readFileSync("./swagger.json");
+  res.setHeader("Content-Type", "application/json");
+  res.send(JSON.parse(file));
+});
+
+// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(null, { swaggerUrl: "/swagger.json" })
+);
 
 /* Middleware */
 app.use(
